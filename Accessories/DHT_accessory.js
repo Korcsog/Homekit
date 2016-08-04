@@ -2,7 +2,7 @@
 var temperatureNAME = 'DHT Sensor'; //the temperature sensor's name
 var uuidNAME = 'hap-nodejs:accessories:dht-sensor'; //UUID name
 var pinNumber = 4 //physical pin 7, BCM pin 4
-var sensor = 11 //change to 22 if you have an AM2032 or DHT 22, leave as 11 is you have DHT11
+var sensor = 22 //change to 22 if you have an AM2032 or DHT 22, leave as 11 is you have DHT11
 // END of SETUP
 
 var Accessory = require('../').Accessory;
@@ -45,7 +45,7 @@ var sensorUUID = uuid.generate(uuidNAME);
 var sensor = exports.accessory = new Accessory(temperatureNAME, sensorUUID);
 
 // Add properties for publishing (in case we're using Core.js and not BridgedCore.js)
-sensor.username = "AB:CD:EF:12:34:56";
+sensor.username = "BB:CD:EF:17:34:56";
 sensor.pincode = "031-45-154";
 
 sensor
