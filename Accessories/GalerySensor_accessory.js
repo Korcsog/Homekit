@@ -3,9 +3,9 @@ var Service = require('../').Service;
 var Characteristic = require('../').Characteristic;
 var uuid = require('../').uuid;
 var ds18b20 = require('ds18b20');
-var temperatureNAME = ‘Galeria Sensor'; //the temperature sensor's name
-var uuidNAME = 'hap-nodejs:accessories:galeria-sensor'; //UUID name
-var dsSensor = '28-0215657fxxxx'; // the temperature sensor's id
+var temperatureNAME = ‘Galery Sensor'; //the temperature sensor's name
+var uuidNAME = 'hap-nodejs:accessories:galery-sensor'; //UUID name
+var dsSensor = '28-0416619a1aff'; // the temperature sensor's id
 
 // here's the temperature sensor device that we'll expose to HomeKit
 var TEMP_SENSOR = {
