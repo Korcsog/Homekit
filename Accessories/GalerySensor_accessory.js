@@ -3,9 +3,9 @@ var Service = require('../').Service;
 var Characteristic = require('../').Characteristic;
 var uuid = require('../').uuid;
 var ds18b20 = require('ds18b20');
-var temperatureNAME = ‘Galery Sensor'; //the temperature sensor's name
-var uuidNAME = 'hap-nodejs:accessories:galery-sensor'; //UUID name
-var dsSensor = '28-0416619a1aff'; // the temperature sensor's id
+var temperatureNAME = ‘Galery Sensor'; // temperature sensor's name
+var uuidNAME = 'hap-nodejs:accessories:galery-sensor'; //UUID name 
+var dsSensor = '28-0416619a1aff'; // the temperature sensor's id .... each sensor has a unique ID
 
 // here's the temperature sensor device that we'll expose to HomeKit
 var TEMP_SENSOR = {
@@ -26,9 +26,9 @@ var sensorUUID = uuid.generate(uuidNAME);
 // This is the Accessory that we'll return to HAP-NodeJS that represents our fake lock.
 var sensor = exports.accessory = new Accessory(temperatureNAME, sensorUUID);
 
-// Add properties for publishing (in case we're using Core.js and not BridgedCore.js)
-sensor.username = "AA:BA:EF:32:14:20”;
-sensor.pincode = "031-45-154";
+
+sensor.username = "AA:BA:EF:32:14:20”; // use unique MAC for each accessories
+sensor.pincode = "031-45-154";  // do not change!
 
 // Add the actual TemperatureSensor Service.
 // We can see the complete list of Services and Characteristics in `lib/gen/HomeKitTypes.js`
