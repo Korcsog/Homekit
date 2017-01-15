@@ -15,7 +15,7 @@ var DHT_SENSOR = {
   currentTemperature: 0,
   currentHumidity: 0,
   initialize: function () {
-    return sensorLib.initialize(sensor, pinNumber);
+    return sensorLib.initialize(sensor, pinNumber);   // use numbers for sensor (11 or 22) and pinNumber (bcm pin number)
   },
   getTemperature: function() {
     console.log("Getting the current temperature!");
