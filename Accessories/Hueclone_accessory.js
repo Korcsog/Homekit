@@ -4,8 +4,8 @@ console.log("Connecting to MQTT broker...");
 var mqtt = require('mqtt');
 var options = {
   port: 1883,
-  host: '192.168.1.42',
-  clientId: 'HueTest'
+  host: '192.168.1.42',  // your MQTT brokers IP address
+  clientId: 'HueTest'    
 };
 var client = mqtt.connect(options);
 console.log("Wifi Light Connected to MQTT broker");
@@ -58,7 +58,7 @@ var FAKELIGHT = {
 
 // Generate a consistent UUID for our light Accessory that will remain the same even when
 // restarting our server. We use the `uuid.generate` helper function to create a deterministic
-// UUID based on an arbitrary "namespace" and the word "OFFICELIGHT".
+// UUID based on an arbitrary "namespace" and the word "HUECLONE".
 var lightUUID = uuid.generate('hap-nodejs:accessories:HUECLONE');
 
 // This is the Accessory that we'll return to HAP-NodeJS that represents our fake light.
