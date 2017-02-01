@@ -14,14 +14,14 @@ var OUTLET = {
     if (on) {
       
           OUTLET.powerOn = on;  // =true volt
-      cmd.run('cd /home/pi/HAP-NodeJS/Orvibo/ && sudo python orvibo.py -i 192.168.1.82 -s on'); // orvibo's IP address    
+      cmd.run('cd /home/pi/HAP-NodeJS/Orvibo/ && sudo python orvibo.py -i 192.168.1.82 -s on'); // change the IP into your orvibo's IP address    
           console.log("...outlet is now on.");
     } 
     else {
      
           console.log("...outlet is now off.");
           OUTLET.powerOn = false;
-           cmd.run('cd /home/pi/HAP-NodeJS/Orvibo/ && sudo python orvibo.py -i 192.168.1.82 -s off');
+           cmd.run('cd /home/pi/HAP-NodeJS/Orvibo/ && sudo python orvibo.py -i 192.168.1.82 -s off'); //change the IP into your orvibo's IP address  
           }
   },
     identify: function() {
@@ -46,7 +46,7 @@ outlet
   .getService(Service.AccessoryInformation)
   .setCharacteristic(Characteristic.Manufacturer, "Orvibo")
   .setCharacteristic(Characteristic.Model, "S20")
-  .setCharacteristic(Characteristic.SerialNumber, "accf23932f74");
+  .setCharacteristic(Characteristic.SerialNumber, "by Kristof Korcsog");
 
 // listen for the "identify" event for this Accessory
 outlet.on('identify', function(paired, callback) {
