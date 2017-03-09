@@ -47,6 +47,13 @@ var sensor = exports.accessory = new Accessory('Livingroom Humidity Sensor', sen
 sensor.username = "D2:5D:3A:AE:5E:F1";
 sensor.pincode = "031-45-154";
 
+
+sensor
+  .getService(Service.AccessoryInformation)
+  .setCharacteristic(Characteristic.Manufacturer, "Kristof Korcsog") //additional  accessory information
+  .setCharacteristic(Characteristic.Model, "DHT22") //additional  accessory information
+  .setCharacteristic(Characteristic.SerialNumber, "000001"); //additional  accessory information
+
 // Add the actual TemperatureSensor Service.
 // We can see the complete list of Services and Characteristics in `lib/gen/HomeKitTypes.js`
 sensor
